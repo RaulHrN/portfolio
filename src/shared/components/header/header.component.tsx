@@ -7,39 +7,37 @@ import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 export function Header(): JSX.Element {
 	// States
 	const theme = useTheme();
-	const smallScreen = theme.breakpoints.down('sm');
+	const isSmallScreen = theme.breakpoints.down('sm');
 
-	const [leftMenuContent, setLeftMenuContent] = useState<JSX.Element>(() => leftMenuContentHandler());
 	const [leftMenu, setLeftMenu] = useState<boolean>(false);
 
-	useEffect(() => {
-		setLeftMenuContent(leftMenuContentHandler());
-		setLeftMenu(Boolean(smallScreen));
-	// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [smallScreen]);
-
+	// Function to handle left menu content based on screen size and menu state
 	function leftMenuContentHandler(): JSX.Element {
-		if (smallScreen) {
-			console.log('tela pequena');
-			return (
-				leftMenu ? <MenuIcon /> : <MenuOpenIcon />
-			);
+		if (isSmallScreen && leftMenu) {
+			return <MenuOpenIcon />;
 		}
 
-		console.log('tela grande');
+		if (isSmallScreen) {
+			return <MenuIcon />;
+		}
+
 		return (
 			<>
-				<Link to={'/'}>Home</Link>
-				<Link to={'/projects'}>Projects</Link>
-				<Link to={'/resume'}>Resume</Link>
+				<Link to='/'>Home</Link>
+				<Link to='/projects'>Projects</Link>
+				<Link to='/resume'>Resume</Link>
 			</>
 		);
 	}
 
+	useEffect(() => {
+		setLeftMenu(Boolean(isSmallScreen));
+	}, [isSmallScreen]);
+
 	return (
 		<header>
 			<div className='left-content'>
-				{leftMenuContent}
+				{leftMenuContentHandler()}
 			</div>
 			<div className='right-content'></div>
 		</header>
