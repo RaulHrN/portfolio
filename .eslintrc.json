@@ -71,6 +71,7 @@
               "js": "never",
               "jsx": "never"
             }
-        ]
+        ],
+        "no-undef": "off"
     }
 }
