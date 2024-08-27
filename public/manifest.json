@@ -1,21 +1,21 @@
 {
-  "short_name": "Nascimento",
-  "name": "Raul H. Nascimento",
-  "icons": [
-    {
-      "src": "wolf-head.svg",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "wolf-head.svg",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "wolf-head.svg",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ]
+    "short_name": "Nascimento",
+    "name": "Raul H. Nascimento",
+    "icons": [
+        {
+            "src": "wolf-head.svg",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "wolf-head.svg",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "wolf-head.svg",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
 }

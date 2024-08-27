@@ -1,12 +1,10 @@
 import React from 'react';
-import {Header} from '../../shared/components/header/header.component';
+import { Header } from '../../shared/components/header/header.component';
 
-function App() {
-	return (
-		<div className='App'>
-			<Header />
-		</div>
-	);
-}
+const App = () => (
+  <div className="App">
+    <Header />
+  </div>
+);
 
 export default App;
