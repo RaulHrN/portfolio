@@ -1,9 +1,24 @@
-import Image from "next/image";
+import styles from './homePage.module.css';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div>
-      Hello World!
-    </div>
-  );
+    <main className="container">
+      <article className={styles.info}>
+        <section className={styles.info_section}>
+          <div className={styles.title}></div>
+          <div className={styles.subtitle}></div>
+        </section>
+        <section className={styles.info_section}>
+          <div className={styles.description}></div>
+        </section>
+        <section className={styles.info_section}>
+          <button>olá</button>
+          <button>olá</button>
+        </section>
+      </article>
+      <article>
+        <figure></figure>
+      </article>
+    </main>
+  )
 }
